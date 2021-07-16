@@ -28,23 +28,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |RAIS/ESC|   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  |  | \   |
+ * |RAIS/ESC|   Q  |   W  |   F  |   P  |   B  |                              |   J  |   L  |   U  |   Y  | ;  : |  | \   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ' "   |
+ * |Ctrl/BS |   A  |   R  |   S  |   T  |   G  |                              |   M  |   N  |   E  |   I  |   O  |  ' "   |
  * |        |LShift| RGUI |LCtrl | LAlt |      |                              |      | RAlt |RCtrl | RGUI |RShift|        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |LShift|LShift|  |LShift|LShift|   N  |   M  | ,  < | . >  | /  ? |  - _   |
+ * | LShift |   Z  |   X  |   C  |   D  |   V  |LShift|LShift|  |LShift|LShift|   K  |   H  | ,  < | . >  | /  ? |  - _   |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        | GUI  | Del  | Enter| Space| Esc  |  | Enter| Space| Tab  | Bksp | AltGr|
  *                        |      |      | Alt  | Lower| Raise|  | Lower| Raise|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_QWERTY] = LAYOUT(
-      LT(_RAISE, KC_ESC),       KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_LBRC,
-      KC_BSPC, LSFT_T(KC_A), LGUI_T(KC_S), LCTL_T(KC_D), LALT_T(KC_F),   KC_G,                                KC_H,    RALT_T(KC_J), RCTL_T(KC_K), RGUI_T(KC_L), RSFT_T(KC_SCLN), KC_QUOT,
-      KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LSFT,   KC_LSFT, KC_LSFT, KC_LSFT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-              KC_LGUI, KC_DEL, MT(MOD_LALT, KC_ENT), LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC), LT(_LOWER, KC_ENT), LT(_RAISE, KC_SPC), KC_TAB,  KC_BSPC, KC_RALT
-    ),
+    [_QWERTY] = LAYOUT(LT(2,KC_ESC), KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_PIPE, KC_LCTL, LSFT_T(KC_A), LGUI_T(KC_R), LCTL_T(KC_S), LALT_T(KC_T), KC_G, KC_M, RALT_T(KC_N), RCTL_T(KC_E), RGUI_T(KC_I), RSFT_T(KC_O), KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_LSFT, KC_LSFT, KC_LSFT, KC_LSFT, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, KC_MINS, KC_LGUI, KC_DEL, MT(MOD_LALT,KC_ENT), LT(1,KC_SPC), LT(2,KC_ESC), LT(1,KC_ENT), LT(2,KC_SPC), KC_TAB, KC_BSPC, KC_RALT),
 /*
  * Lower Layer: Symbols
  *
