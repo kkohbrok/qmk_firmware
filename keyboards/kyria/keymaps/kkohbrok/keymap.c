@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |RAIS/ESC|   Q  |   W  |   F  |   P  |   B  |                              |   J  |   L  |   U  |   Y  | ;  : |  | \   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |Ctrl/BS |   A  |   R  |   S  |   T  |   G  |                              |   M  |   N  |   E  |   I  |   O  |  ' "   |
- * |        |LShift| RGUI |LCtrl | LAlt |      |                              |      | RAlt |RCtrl | RGUI |RShift|        |
+ * |        |LShift| LGUI |LCtrl | LAlt |      |                              |      | RAlt |RCtrl | LGUI |RShift|        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   D  |   V  |LShift|LShift|  |LShift|LShift|   K  |   H  | ,  < | . >  | /  ? |  - _   |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      | Alt  | Lower| Raise|  | Lower| Raise|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_QWERTY] = LAYOUT(LT(2,KC_ESC), KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_PIPE, KC_LCTL, LSFT_T(KC_A), LGUI_T(KC_R), LCTL_T(KC_S), LALT_T(KC_T), KC_G, KC_M, RALT_T(KC_N), RCTL_T(KC_E), RGUI_T(KC_I), RSFT_T(KC_O), KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_LSFT, KC_LSFT, KC_LSFT, KC_LSFT, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, KC_MINS, KC_LGUI, KC_DEL, MT(MOD_LALT,KC_ENT), LT(1,KC_SPC), LT(2,KC_ESC), LT(1,KC_ENT), LT(2,KC_SPC), KC_TAB, KC_BSPC, KC_RALT),
+    [_QWERTY] = LAYOUT(LT(2,KC_ESC), KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_PIPE, KC_LCTL, LSFT_T(KC_A), LGUI_T(KC_R), LCTL_T(KC_S), LALT_T(KC_T), KC_G, KC_M, RALT_T(KC_N), RCTL_T(KC_E), LGUI_T(KC_I), RSFT_T(KC_O), KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_LSFT, KC_LSFT, KC_LSFT, KC_LSFT, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, KC_MINS, KC_LGUI, KC_DEL, MT(MOD_LALT,KC_ENT), LT(1,KC_SPC), LT(2,KC_ESC), LT(1,KC_ENT), LT(2,KC_SPC), KC_TAB, KC_BSPC, KC_RALT),
 /*
  * Lower Layer: Symbols
  *
@@ -66,9 +66,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |        |   1  |  2   |  3   |  4   |  5   |                              |  6   |  7   |  8   |  9   |  0   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      | Prev | Play | Next | VolUp|                              | Left | Down | Up   | Right|      |        |
+ * |        |      | Prev | Play | Next | VolUp|                              |      | Left | Down | Up   | Right|        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |      |      |      | Mute | VolDn|      |      |  |      |      | MLeft| Mdown| MUp  |MRight|      |        |
+ * |        |      |      |      | Mute | VolDn|      |      |  |      |      |      | MLeft| Mdown| MUp  |MRight|        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
@@ -76,8 +76,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_RAISE] = LAYOUT(
       _______, KC_1,      KC_2,    KC_3,    KC_4,    KC_5,                                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-      _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-      _______, _______, _______, _______, KC_MUTE, KC_VOLD, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,
+      _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                     _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______,
+      _______, _______, _______, _______, KC_MUTE, KC_VOLD, _______, _______, _______, _______, _______, KC_HOME, KC_PGDOWN, KC_PGUP, KC_END, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 /*
